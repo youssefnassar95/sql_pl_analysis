@@ -1,0 +1,4 @@
+/.DS_Store
+/.vscode
+/postgres local.session.sql
+/postgres_data
