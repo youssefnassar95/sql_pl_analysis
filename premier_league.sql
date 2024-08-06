@@ -6,7 +6,7 @@
 select 
 	"Season_End_Year", 
     count("Season_End_Year") as Matches_Played
-from premier-league-matches
+from premier_league_stats
 group by "Season_End_Year"
 Order by "Season_End_Year";
 
@@ -37,7 +37,8 @@ There were above 40% away wins in season 2020/2021, which is much more than aver
 
 -- Selecting seasons stats - goals scored and goals per game for each season
 select 
-	"Season_End_Year", sum("HomeGoals" + "AwayGoals") as Goals_Scored, cast(sum("HomeGoals" + "AwayGoals")/count("Season_End_Year") as decimal (10,2)) as Goals_Per_Game
+	"Season_End_Year", sum("HomeGoals" + "AwayGoals") as Goals_Scored, 
+    cast(sum("HomeGoals" + "AwayGoals")/count("Season_End_Year") as decimal (10,2)) as Goals_Per_Game
 from premier_league_stats
 group by "Season_End_Year"
 order by Goals_Per_Game DESC;
