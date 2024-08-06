@@ -10,7 +10,7 @@ command to run docker container with postgres locally:
     --name pg-database \
     postgres:13
 
-command to run container fo pgadim
+command to run container fo pgadmin
 
 docker run -it \
     -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
